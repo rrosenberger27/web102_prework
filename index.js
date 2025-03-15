@@ -37,7 +37,10 @@ function addGamesToPage(games) {
     currGameCard.innerHTML = `
         <img src="${game.img}" class="game-img"> 
         <h3>${game.name}</h3>
-        <p>${game.description}</p>`;
+        <p>${game.description}</p>
+        <p>raised: ${game.pledged} <br/>
+        goal : ${game.goal}</p>
+        `;
     // append the game to the games-containe
     document.getElementById("games-container").appendChild(currGameCard);
   }
@@ -183,8 +186,35 @@ const firstGameName = document.createElement("p");
 firstGameName.textContent = firstGame.name;
 firstGameContainer.appendChild(firstGameName);
 
+// do the same for the runner up item
 const secondGameName = document.createElement("p");
 secondGameName.textContent = secondGame.name;
 secondGameContainer.appendChild(secondGameName);
 
-// do the same for the runner up item
+/* ----------------------------------------
+BONUS FUNCTIONALITY
+*/
+
+function searchGames() {
+  const searchInput = prompt(
+    "Please enter the name of the game you are looking for"
+  );
+
+  if (!searchInput) {
+    alert("No search term entered. Please try again");
+    return;
+  }
+
+  const filteredGames = GAMES_JSON.filter((game) =>
+    game.name.toLowerCase().includes(searchInput.toLowerCase())
+  );
+  deleteChildElements(gamesContainer);
+
+  if (!filteredGames.length) {
+    gamesContainer.innerHTML = `<p>No matching games found</p>`;
+  } else {
+    addGamesToPage(filteredGames);
+  }
+}
+const searchBtn = document.getElementById("search-btn");
+searchBtn.addEventListener("click", searchGames);
