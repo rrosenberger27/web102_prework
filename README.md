@@ -1,6 +1,6 @@
 # WEB102 Prework - *Sea Monster*
 
-Submitted by: **Riley Rosenbergere**
+Submitted by: **Riley Rosenberger**
 
 **Sea Monster** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
