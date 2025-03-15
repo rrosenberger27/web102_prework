@@ -37,7 +37,7 @@ GIF created with Giphy Capute
 
 Describe any challenges encountered while building the app. 
 
-I would say that in building this app things went pretty smoothly. I did come across small bugs at times with making sure I wrote the correct innerHTML and other small errors in the code I wrote, but was able to clear these up with 
+I would say that in building this app things went pretty smoothly. I did come across small bugs at times with making sure I wrote the correct innerHTML and other small errors in the code I wrote, but was able to clear these up with fairly quickly.
 
 ## License
 
